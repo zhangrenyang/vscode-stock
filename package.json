@@ -1,0 +1,74 @@
+{
+  "name": "vscode-stock",
+  "displayName": "股票",
+  "description": "显示实时股票信息",
+  "version": "0.0.1",
+  "publisher": "zhang_renyang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangrenyang/vscode-stock.git"
+  },
+  "keywords": [
+    "stock",
+    "股票",
+    "基金",
+    "炒股",
+    "行情",
+    "行情信息"
+  ],
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-stock.start",
+        "title": "股票: 获取最新股票信息"
+      },
+      {
+        "command": "vscode-stock.stop",
+        "title": "股票: 关闭股票信息"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-stock.start",
+        "key": "ctrl+shift+q",
+        "mac": "cmd+shift+q"
+      }
+    ],
+    "configuration": {
+      "title": "股票",
+      "properties": {
+        "stockExtension.stockCode": {
+          "type": "string",
+          "default": "sh000001,sz399001",
+          "description": "股票代码,多个代码用逗号分隔(如sh000001,sz399001)"
+        },
+        "stockExtension.updateTime": {
+          "type": "number",
+          "default": 10000,
+          "minimum": 5000,
+          "description": "更新频率（毫秒），最小值为 5000 ms"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.3.5",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "crawler": "^1.5.0"
+  }
+}
