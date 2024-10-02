@@ -45,4 +45,4 @@
   - 请检查你输入的股票代码是否正确，并确保网络连接正常。
   
 ## 支持与反馈
-如果您有任何问题或建议，欢迎通过插件仓库的 [Issue](https://github.com/your-repository/issues) 功能与我们联系。
+如果您有任何问题或建议，欢迎通过插件仓库的 [Issue](https://github.com/zhangrenyang/vscode-stock/issues) 功能与我们联系。
