@@ -2,8 +2,10 @@
   "name": "vscode-stock",
   "displayName": "股票",
   "description": "显示实时股票信息",
-  "version": "0.0.1",
-  "publisher": "zhang_renyang",
+  "version": "0.0.2",
+  "publisher": "zhang-renyang",
+  "icon": "images/logo.png",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/zhangrenyang/vscode-stock.git"
@@ -21,6 +23,10 @@
   },
   "categories": [
     "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-stock.start",
+    "onCommand:vscode-stock.stop"
   ],
   "main": "./extension.js",
   "contributes": {
